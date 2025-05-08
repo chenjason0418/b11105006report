@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="/index.html" class="logo">Stellar<span>a</span></a>
+        <button class="mobile-menu-btn" aria-label="開啟選單">☰</button>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/Explore/Explore.html">Explore</a></li>
+                <li><a href="/pages/Gallery/Gallery.html">Gallery</a></li>
+                <li><a href="/pages/Mission/Mission.html">Missions</a></li>
+                <li><a href="/pages/Learn/Learn.html">Learn</a></li>
+                <li><a href="/pages/Contact/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-image"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>展開宇宙之旅</h1>
+            <p>你正站在銀河邊緣，準備踏出第一步。在這裡，我們將從太陽系出發，經過星雲、黑洞、遙遠星系，一步步揭開宇宙的奧秘。</p>
+        </div>
+    </section>
+    
+    <script>
+        // Simple JavaScript to toggle mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                const expanded = nav.classList.contains('active');
+                this.setAttribute('aria-expanded', expanded);
+            });
+        });
+    </script>
+
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">探索主題</h2>
+    <div class="gallery">
+      <div class="gallery-item" data-aos="flip-left" data-aos-delay="100">
+        <img src="/imgs/solar system.jpg" alt="太陽系">
+        <div class="gallery-content">
+          <div class="gallery-header">
+            <p>☀️ 太陽系</p>
+            <button class="more-btn" aria-label="了解更多關於太陽系" onclick="openModal('modal-solar')">
+              <img src="/imgs/morebtn.png" alt="更多">
+            </button>
+          </div>
+          <p class="gallery-description">了解八大行星、衛星、小行星與太陽的結構與運作原理。</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-aos="flip-right" data-aos-delay="200">
+        <img src="/imgs/galaxies.jpg" alt="星系">
+        <div class="gallery-content">
+          <div class="gallery-header">
+            <p>🌌 星系</p>
+            <button class="more-btn" aria-label="了解更多關於星系" onclick="openModal('modal-galaxy')">
+              <img src="/imgs/morebtn.png" alt="更多">
+            </button>
+          </div>
+          <p class="gallery-description">螺旋星系、橢圓星系與不規則星系的樣貌與分布。</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-aos="flip-left" data-aos-delay="300">
+        <img src="/imgs/nebulae.jpg" alt="星雲">
+        <div class="gallery-content">
+          <div class="gallery-header">
+            <p>🌠 星雲</p>
+            <button class="more-btn" aria-label="了解更多關於星雲" onclick="openModal('modal-nebula')">
+              <img src="/imgs/morebtn.png" alt="更多">
+            </button>
+          </div>
+          <p class="gallery-description">星星誕生的起點，充滿色彩與變化的星際雲團。</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-aos="flip-right" data-aos-delay="400">
+        <img src="/imgs/black-hole.jpg" alt="黑洞">
+        <div class="gallery-content">
+          <div class="gallery-header">
+            <p>🕳️ 黑洞</p>
+            <button class="more-btn" aria-label="了解更多關於黑洞" onclick="openModal('modal-blackhole')">
+              <img src="/imgs/morebtn.png" alt="更多">
+            </button>
+          </div>
+          <p class="gallery-description">連光都無法逃逸的時空扭曲，揭示宇宙的極限力量。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="workspace-section" data-aos="fade-up">
+    <img src="/imgs/mission-control.jpg" alt="Mission Control" class="workspace-image" data-aos="fade-right">
+    <div class="workspace-content" data-aos="fade-left" data-aos-delay="200">
+      <h2 class="section-title">我們如何探索宇宙？</h2>
+      <p>每一次太空任務的背後，是無數工程師、天文學家與冒險者的投入。我們透過望遠鏡拍攝星體影像，透過探測器登陸行星，用數據與圖像拼湊宇宙的樣貌。從阿波羅11號到詹姆斯·韋伯望遠鏡，這場旅程從未停止。</p>
+    </div>
+  </section>
+
+  <!-- 修正角色和互動性 -->
+  <div id="modal-solar" class="modal" role="dialog" aria-labelledby="solar-title" aria-modal="true">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-solar')" aria-label="關閉">&times;</span>
+      <h3 id="solar-title">太陽系</h3>
+      <p>太陽系包括太陽、八大行星（如地球、火星、土星）、衛星、小行星帶與其他小天體。這是我們探索宇宙的起點。</p>
+    </div>
+  </div>
+  
+  <div id="modal-galaxy" class="modal" role="dialog" aria-labelledby="galaxy-title" aria-modal="true">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-galaxy')" aria-label="關閉">&times;</span>
+      <h3 id="galaxy-title">星系</h3>
+      <p>星系由數十億顆恆星、星雲與暗物質組成，銀河系就是我們的家。星系是宇宙的骨架，呈現出無數種形態。</p>
+    </div>
+  </div>
+  
+  <div id="modal-nebula" class="modal" role="dialog" aria-labelledby="nebula-title" aria-modal="true">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-nebula')" aria-label="關閉">&times;</span>
+      <h3 id="nebula-title">星雲</h3>
+      <p>星雲是由氫氣、塵埃與離子化氣體組成的巨大雲團，經常是恆星形成的地方，擁有驚人的顏色與形狀。</p>
+    </div>
+  </div>
+  
+  <div id="modal-blackhole" class="modal" role="dialog" aria-labelledby="blackhole-title" aria-modal="true">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-blackhole')" aria-label="關閉">&times;</span>
+      <h3 id="blackhole-title">黑洞</h3>
+      <p>黑洞是密度極高的天體，其引力強到連光都無法逃逸，是目前宇宙中最神祕的存在之一。</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+      document.getElementById(id).focus();
+      // 防止背景滾動
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+      // 恢復背景滾動
+      document.body.style.overflow = 'auto';
+    }
+
+    // 為模態視窗添加鍵盤支援
+    document.addEventListener('keydown', function(e) {
+      const activeModal = document.querySelector('.modal[style*="display: flex"]');
+      if (activeModal && e.key === 'Escape') {
+        const id = activeModal.id;
+        closeModal(id);
+      }
+    });
+  </script>
+
+    <!-- Footer with Social Media Icons -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo" data-aos="fade-up">
+                <h1>Stellara</h1>
+            </div>
+            <div class="footer-menu" data-aos="fade-up" data-aos-delay="100">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="/pages/Explore/Explore.html">宇宙探索</a></li>
+                    <li><a href="/pages/Gallery/Gallery.html">圖片精選</a></li>
+                    <li><a href="/pages/Mission/Mission.html">太空任務</a></li>
+                    <li><a href="/pages/Learn/Learn.html">宇宙知識</a></li>
+                    <li><a href="/pages/Contact/Contact.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
+                <h2>Contact</h2>
+                <ul>
+                    <li>TEL : +886-0-0000000</li>
+                    <li>E-MAIL : xxxxxx@gmail.com</li>
+                    <li>709台南市安南區台江大道三段600號</li>
+                </ul>
+            </div>
+            <div class="footer-social" data-aos="fade-up" data-aos-delay="300">
+                <h2>Social</h2>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright 2025 © Company name. All rights reserved</p>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // 選項設定
+            offset: 120, // 元素與視窗底部的距離觸發動畫
+            delay: 0, // 全域延遲時間
+            duration: 800, // 全域動畫持續時間
+            easing: 'ease', // 動畫效果
+            once: false, // 是否只執行一次
+            mirror: false, // 滾動方向改變時是否重新執行動畫
+            anchorPlacement: 'top-bottom' // 定位點位置
+        });
+    </script>
+</body>
+</html>

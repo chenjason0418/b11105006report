@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="/index.html" class="logo">Stellar<span>a</span></a>
+        <button class="mobile-menu-btn">☰</button>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/Explore/Explore.html">Explore</a></li>
+                <li><a href="/pages/Gallery/Gallery.html">Gallery</a></li>
+                <li><a href="/pages/Mission/Mission.html">Missions</a></li>
+                <li><a href="/pages/Learn/Learn.html">Learn</a></li>
+                <li><a href="/pages/Contact/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1>從星辰開始認識宇宙</h1>
+            <p>宇宙是如何開始的？黑洞為何吞噬一切？這裡是你探索知識的起點。</p>
+          </div>
+    </section>
+    
+    <!-- Learn Section -->
+    <section class="section">
+      <h2 class="section-title">宇宙主題學習卡</h2>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <img src="/imgs/bigbang.jpg" alt="Big Bang">
+          <h3>宇宙大爆炸</h3>
+          <p>宇宙從極小、極熱的狀態開始，短短瞬間膨脹成我們熟悉的宇宙。</p>
+          <button onclick="showModal('modal-bigbang')">閱讀更多</button>
+        </div>
+        <div class="learn-card">
+          <img src="/imgs/star-cycle.jpg" alt="Star Life Cycle">
+          <h3>恆星的生命週期</h3>
+          <p>從星雲誕生，到白矮星、超新星或黑洞，恆星有如生命般的循環。</p>
+          <button onclick="showModal('modal-star')">閱讀更多</button>
+        </div>
+        <div class="learn-card">
+            <img src="/imgs/black-hole.jpg" alt="Black Hole">
+            <h3>黑洞是什麼？</h3>
+            <p>黑洞是密度極高的天體，其引力強大到連光都無法逃逸。</p>
+            <button onclick="showModal('modal-blackhole')">閱讀更多</button>
+        </div>
+          
+        <div class="learn-card">
+            <img src="/imgs/lightyear.jpg" alt="Lightyear Concept">
+            <h3>光年與距離概念</h3>
+            <p>光年是距離單位，代表光一年走的距離，用來測量星際尺度。</p>
+            <button onclick="showModal('modal-lightyear')">閱讀更多</button>
+        </div>
+          
+        <div class="learn-card">
+            <img src="/imgs/cosmic-microwave.jpg" alt="CMB">
+            <h3>宇宙微波背景輻射</h3>
+            <p>這是大爆炸留下的熱痕跡，是研究宇宙早期的重要證據。</p>
+            <button onclick="showModal('modal-cmb')">閱讀更多</button>
+        </div>
+          
+        <div class="learn-card">
+            <img src="/imgs/gravity.jpg" alt="Gravity in Space">
+            <h3>重力與空間彎曲</h3>
+            <p>愛因斯坦提出重力是空間彎曲的結果，而非看不見的力量。</p>
+            <button onclick="showModal('modal-gravity')">閱讀更多</button>
+        </div>
+
+        <div class="learn-card">
+            <img src="/imgs/planet-formation.jpg" alt="Planet Formation">
+            <h3>行星如何形成</h3>
+            <p>行星從星際塵埃雲中聚集形成，經歷碰撞、融合與清除軌道過程。</p>
+            <button onclick="showModal('modal-planet')">閱讀更多</button>
+        </div>
+          
+        <div class="learn-card">
+            <img src="/imgs/solar-system.jpg" alt="Solar System">
+            <h3>太陽系結構</h3>
+            <p>八大行星環繞太陽運行，伴隨小行星、彗星與衛星構成一個多層次系統。</p>
+            <button onclick="showModal('modal-solar')">閱讀更多</button>
+        </div>
+
+        <div class="learn-card">
+            <img src="/imgs/comet.jpg" alt="Comet">
+            <h3>彗星與流星</h3>
+            <p>彗星是冰與塵的混合體，靠近太陽時會產生明亮尾巴，流星則是進入地球大氣的碎片。</p>
+            <button onclick="showModal('modal-comet')">閱讀更多</button>
+        </div>
+          
+        <div class="learn-card">
+            <img src="/imgs/hubble-passes.jpg" alt="Space Telescope">
+            <h3>太空望遠鏡</h3>
+            <p>如哈伯望遠鏡可穿越地球大氣干擾，提供清晰宇宙影像。</p>
+            <button onclick="showModal('modal-telescope')">閱讀更多</button>
+        </div>
+
+        <div class="learn-card">
+            <img src="/imgs/magnetic-field.jpg" alt="Earth Magnetic Field">
+            <h3>地球磁場</h3>
+            <p>地球的磁場可保護我們免於太陽風與宇宙射線的傷害，是無形的護盾。</p>
+            <button onclick="showModal('modal-magnetic')">閱讀更多</button>
+        </div>
+          
+        <div class="learn-card">
+            <img src="/imgs/multiverse.jpg" alt="Multiverse Theory">
+            <h3>多重宇宙理論</h3>
+            <p>部分理論認為我們的宇宙只是無數宇宙中的一個，每個宇宙擁有不同法則。</p>
+            <button onclick="showModal('modal-multiverse')">閱讀更多</button>
+        </div>
+      </div>
+    </section>
+    
+    <div id="modal-bigbang" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+      <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+        <span class="close-btn" onclick="closeModal('modal-bigbang')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+        <h2>宇宙大爆炸</h2>
+        <p>根據標準宇宙學模型，宇宙約於138億年前誕生，自一個高密度、高溫的奇點開始，迅速膨脹並持續擴張，形成今日廣袤無垠的宇宙。</p>
+      </div>
+    </div>
+    
+    <div id="modal-star" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+      <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+        <span class="close-btn" onclick="closeModal('modal-star')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+        <h2>恆星的生命週期</h2>
+        <p>恆星誕生於星雲，經歷主序星階段，燃燒氫與氦，最終根據質量不同成為白矮星、超新星甚至黑洞。</p>
+      </div>
+    </div>
+
+    <div id="modal-blackhole" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+          <span class="close-btn" onclick="closeModal('modal-blackhole')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+          <h2>黑洞是什麼？</h2>
+          <p>黑洞是由恆星坍縮或其他密度極高的物質形成的天體。其事件視界內部的任何物質與輻射都無法逃脫，是目前已知最極端的重力場。</p>
+        </div>
+    </div>
+      
+    <div id="modal-lightyear" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+          <span class="close-btn" onclick="closeModal('modal-lightyear')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+          <h2>光年與距離概念</h2>
+          <p>光年是光在一年中行進的距離，約為9.46兆公里。天文學中常用來描述星際與星系之間的距離。</p>
+        </div>
+    </div>
+      
+    <div id="modal-cmb" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+          <span class="close-btn" onclick="closeModal('modal-cmb')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+          <h2>宇宙微波背景輻射</h2>
+          <p>這種輻射是大爆炸後約38萬年形成的光，現在仍可在宇宙中偵測到，是宇宙起源的關鍵證據。</p>
+        </div>
+    </div>
+      
+    <div id="modal-gravity" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+          <span class="close-btn" onclick="closeModal('modal-gravity')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+          <h2>重力與空間彎曲</h2>
+          <p>根據廣義相對論，重力是質量造成時空彎曲的結果。物體沿著這個彎曲路徑運動，因此產生我們感受到的「重力」。</p>
+        </div>
+    </div>
+    
+    <div id="modal-planet" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+            <span class="close-btn" onclick="closeModal('modal-planet')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+            <h2>行星如何形成</h2>
+            <p>行星形成起源於原恆星盤，氣體與塵埃在重力作用下逐漸凝聚。經過數百萬年的碰撞與融合，逐漸形成具有穩定軌道的行星。這個過程稱為「行星形成理論」。</p>
+        </div>
+    </div>
+  
+    <div id="modal-solar" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+            <span class="close-btn" onclick="closeModal('modal-solar')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+            <h2>太陽系結構</h2>
+            <p>太陽系由太陽與其重力控制下的行星、衛星、小行星、彗星與太陽風組成。各行星依距離由近到遠排列：水金地火木土天海，並以橢圓軌道繞行太陽。</p>
+        </div>
+    </div>
+  
+    <div id="modal-comet" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+            <span class="close-btn" onclick="closeModal('modal-comet')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+            <h2>彗星與流星</h2>
+            <p>彗星由冰與塵組成，靠近太陽時受熱產生尾巴。當彗星碎片進入地球大氣層並燃燒時，我們稱之為流星。密集出現的流星雨通常與彗星軌道有關。</p>
+        </div>
+    </div>
+  
+    <div id="modal-telescope" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+            <span class="close-btn" onclick="closeModal('modal-telescope')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+            <h2>太空望遠鏡</h2>
+            <p>太空望遠鏡如哈伯（Hubble）與詹姆斯韋伯（JWST）被送入太空運行，避免地球大氣干擾，能捕捉遙遠星系與行星的清晰影像，開啟觀測宇宙的新視野。</p>
+        </div>
+    </div>
+  
+    <div id="modal-magnetic" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+            <span class="close-btn" onclick="closeModal('modal-magnetic')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+            <h2>地球磁場</h2>
+            <p>地球的內部液態金屬流動產生磁場，形成保護地球的磁罩，可抵擋來自太陽的高能粒子，避免大氣被剝離，並產生壯麗的極光現象。</p>
+        </div>
+    </div>
+  
+    <div id="modal-multiverse" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div class="modal-content" style="background:#fff; padding:2rem; border-radius:10px; max-width:600px;">
+            <span class="close-btn" onclick="closeModal('modal-multiverse')" style="float:right; cursor:pointer; font-size:1.5rem;">&times;</span>
+            <h2>多重宇宙理論</h2>
+            <p>多重宇宙理論提出，我們的宇宙可能只是眾多宇宙中的一個。每個宇宙可能擁有不同物理法則、常數與維度，是物理學中尚未證實但深具爭議的理論。</p>
+        </div>
+    </div>
+  
+    <script>
+    function showModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    </script>
+    
+    <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+      <div style="position:relative; display:flex; align-items:center;">
+        <button id="prev-btn" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); background:none; border:none; color:white; font-size:2rem; cursor:pointer; z-index:10000;">❮</button>
+        <div style="position:relative;">
+          <div id="lightbox-caption" style="position:absolute; top:0; left:0; width:100%; background:rgba(0,0,0,0.5); color:white; padding:1rem; text-align:center; font-size:1rem;"></div>
+          <img id="lightbox-img" src="" alt="preview" style="max-width:90vw; max-height:90vh; border:5px solid white; border-radius:8px;">
+        </div>
+        <button id="next-btn" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; color:white; font-size:2rem; cursor:pointer; z-index:10000;">❯</button>
+      </div>
+    </div>
+      </div>
+    </div>
+    <script>
+      const images = Array.from(document.querySelectorAll('.gallery-item img'));
+    let currentIndex = 0;
+    
+    images.forEach((img, index) => {
+      img.addEventListener('click', function() {
+        currentIndex = index;
+        updateLightbox();
+        document.getElementById('lightbox').style.display = 'flex';
+      });
+    });
+    
+    function updateLightbox() {
+      const img = images[currentIndex];
+      const caption = img.nextElementSibling ? img.nextElementSibling.innerText : '';
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-caption').innerText = caption;
+    }
+    
+    document.getElementById('prev-btn').addEventListener('click', function(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightbox();
+    });
+    
+    document.getElementById('next-btn').addEventListener('click', function(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightbox();
+    });
+      document.getElementById('lightbox').addEventListener('click', function() {
+        this.style.display = 'none';
+      });
+    </script>
+    
+    <script>
+        // Simple JavaScript to toggle mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!-- Footer with Social Media Icons -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1>Stellara</h1>
+            </div>
+            <div class="footer-menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="/pages/Explore/Explore.html">宇宙探索</a></li>
+                    <li><a href="/pages/Gallery/Gallery.html">圖片精選</a></li>
+                    <li><a href="/pages/Mission/Mission.html">太空任務</a></li>
+                    <li><a href="/pages/Learn/Learn.html">宇宙知識</a></li>
+                    <li><a href="/pages/Contact/Contact.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>TEL : +886-0-0000000</li>
+                    <li>E-MAIL : xxxxxx@gmail.com</li>
+                    <li>709台南市安南區台江大道三段600號</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h2>Social</h2>
+                <div class="social-icons">
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                    </svg>
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                    </svg>
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright 2025 © Company name. All rights reserved</p>
+    </footer>
+</body>
+</html>
