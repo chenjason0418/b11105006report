@@ -284,6 +284,7 @@
             });
         });
     </script>
+    
 
     <!-- Footer with Social Media Icons -->
     <footer>
@@ -327,5 +328,34 @@
         <hr>
         <p>Copyright 2025 © Company name. All rights reserved</p>
     </footer>
+    <button id="backToTop">↑</button>
+    <script>
+      AOS.init({
+          // 選項設定
+          offset: 120, // 元素與視窗底部的距離觸發動畫
+          delay: 0, // 全域延遲時間
+          duration: 800, // 全域動畫持續時間
+          easing: 'ease', // 動畫效果
+          once: false, // 是否只執行一次
+          mirror: false, // 滾動方向改變時是否重新執行動畫
+          anchorPlacement: 'top-bottom' // 定位點位置
+      });
+      const topButton = document.getElementById('backToTop');
+      // 顯示/隱藏按鈕（淡入淡出）
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+              topButton.classList.add('show');
+          } else {
+              topButton.classList.remove('show');
+          }
+      });
+      // 點擊後平滑滾動至最上方
+      topButton.addEventListener('click', () => {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
+  </script>
 </body>
 </html>

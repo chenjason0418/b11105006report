@@ -267,6 +267,7 @@
         <hr>
         <p>Copyright 2025 © Company name. All rights reserved</p>
     </footer>
+    <button id="backToTop">↑</button>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -278,6 +279,22 @@
             once: false, // 是否只執行一次
             mirror: false, // 滾動方向改變時是否重新執行動畫
             anchorPlacement: 'top-bottom' // 定位點位置
+        });
+        const topButton = document.getElementById('backToTop');
+        // 顯示/隱藏按鈕（淡入淡出）
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                topButton.classList.add('show');
+            } else {
+                topButton.classList.remove('show');
+            }
+        });
+        // 點擊後平滑滾動至最上方
+        topButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>

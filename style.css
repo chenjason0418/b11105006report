@@ -609,3 +609,31 @@ footer p {
         min-width: 100%; /* 在小螢幕時佔滿寬度 */
     }
 }
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+  }
+  
+  #backToTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #backToTop:hover {
+    background-color: #555;
+  }

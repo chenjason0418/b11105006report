@@ -166,6 +166,7 @@
         <hr>
         <p>Copyright 2025 © Company name. All rights reserved</p>
     </footer>
+    <button id="backToTop">↑</button>
     <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
         <div style="position:relative; display:flex; align-items:center;">
           <button id="prev-btn" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); background:none; border:none; color:white; font-size:2rem; cursor:pointer; z-index:10000;">❮</button>
@@ -219,6 +220,22 @@
         offset: 100,
         once: false
       });
+      const topButton = document.getElementById('backToTop');
+        // 顯示/隱藏按鈕（淡入淡出）
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                topButton.classList.add('show');
+            } else {
+                topButton.classList.remove('show');
+            }
+        });
+        // 點擊後平滑滾動至最上方
+        topButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
